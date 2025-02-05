@@ -1,0 +1,30 @@
+Saksnummer:
+Formål:
+
+
+Miljø: DIPS Arena Test
+Dokumentmal:
+Dokumenttype: 
+Dokumentkonsept: 
+VAQM: 
+VAQM Gruppe i Pasientlisteadmin: HN Spesifikk
+Kolonnenavn i VAQM: 
+Kolonnenavn i pasientliste: 
+Pasientliste: 'Generisk testliste for kolonneutprøving'
+Journalgruppe: Kliniske målinger og skåringer FE UNN
+
+
+Nøkkelverdi: $ARENA-HEALTHRECORD-DOCUMENTCONCEPT/
+TemplatID: 
+
+Select: #gjenbruksverdi:/data[at0001]/items[at0016]/items[at0002]/value}
+
+Root spørring:
+Select
+   c/uid/value as CID,
+   a_e
+from composition c[openEHR-EHR-COMPOSITION.care_entry_hn.v*]
+CONTAINS ADMIN_ENTRY a_e[openEHR-EHR-ADMIN_ENTRY.administrativ_informasjon_dips.v2]
+WHERE c/archetype_details/template_id/value = 'Kolonne_Mat_HN_v*'
+ORDER BY c/context/start_time/value DESC
+limit 1
