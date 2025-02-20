@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "MD5-CAM-1.0.1" : "21c7a85180d1f76268a9813b5b2e8655",
+      "MD5-CAM-1.0.1" : "8c49eda494bf52985d34925387009455",
       "PARENT:MD5-CAM-1.0.1" : "BBA2C8A4A40921B9CD67FB733F13FBBF",
-      "sem_ver" : "44.0.0",
+      "sem_ver" : "45.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -4328,16 +4328,7 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "nodeId" : "at0157.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_BOOLEAN",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -15069,31 +15060,13 @@
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "nodeId" : "at0002.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_BOOLEAN",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "nodeId" : "at0003.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_BOOLEAN",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         } ]
       } ],
@@ -15104,18 +15077,6 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "nb" : {
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Fått omfattende undersøkelse eller behandling i en helsetjeneste eller hos tannlege?",
-            "description" : "**“Omfattende undersøkelse eller behandling”** betyr at en eller flere av følgende kriterier er oppfylt: \n\n- undersøkelsen/behandlingen varte i flere timer\n- hud, slimhinne eller kroppsåpning ble punktert, f.eks blodprøve, veneflon, kateter, sprøyte eller lignende\n- sår ble sydd eller på annen måte behandlet\n- det ble gjennomført en operasjon"
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Arbeidet som helsearbeider?",
-            "description" : "**“Arbeidet som helsearbeider”** betyr alt pasientrettet arbeid, inkludert bistand og nødhjelp"
-          },
           "at0002.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002.1",
@@ -15160,7 +15121,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "e8affd06148bfdc63ec2bb4fdff6e909"
       },
-      "details" : { }
+      "details" : {
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.helseopplysning_detaljer_om_operasjon_revidert_hn.v1",
     "differential" : true,
@@ -15172,7 +15146,39 @@
       "@type" : "C_COMPLEX_OBJECT",
       "rmTypeName" : "CLUSTER",
       "nodeId" : "at0000.1",
-      "attributes" : [ ],
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0038.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "local"
+                  },
+                  "constraint" : [ "ac0.1" ],
+                  "selectedTerminologies" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
       "attributeTuples" : [ ]
     },
     "terminology" : {
@@ -15180,47 +15186,35 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "nb" : {
-          "at0024" : {
+          "at0038" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0024",
-            "text" : "Vet ikke",
-            "description" : ""
+            "code" : "at0038",
+            "text" : "Har du løse tenner, tannprotese eller piercing i munnen?",
+            "description" : "Dette inkluderer bro, stift og implantater. Gjelder ikke fyllinger i egne tenner."
           },
-          "at0029" : {
+          "at0038.1" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0029",
-            "text" : "Vet ikke",
-            "description" : ""
+            "code" : "at0038.1",
+            "text" : "Har du løse tenner, tannprotese eller piercing i munnen?",
+            "description" : "Dette inkluderer bro, stift og implantater. Gjelder ikke fyllinger i egne tenner."
           },
-          "at0033" : {
+          "ac0.1" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0033",
-            "text" : "Klarer du å ligge flatt på ryggen?",
-            "description" : ""
-          },
-          "at0036" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0036",
-            "text" : "Vet ikke",
-            "description" : ""
-          },
-          "at0045" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0045",
-            "text" : "Vet ikke",
-            "description" : ""
-          },
-          "at0053" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0053",
-            "text" : "Vet ikke",
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
             "description" : ""
           }
         }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
-      "valueSets" : { }
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0039", "at0040" ]
+        }
+      }
     },
     "adlVersion" : "1.4",
     "buildUid" : "f7e4871e-fab2-36c8-8e52-51d674659bd7",
