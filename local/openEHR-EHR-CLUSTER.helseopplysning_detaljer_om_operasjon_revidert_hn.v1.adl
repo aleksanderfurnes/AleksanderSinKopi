@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"f7736a50d64e56e4d3731cb820b0dd9e">
+		["MD5-CAM-1.0.1"] = <"15964e929ba5c77031e99bddaf15bd4a">
 		["build_uid"] = <"f7e4871e-fab2-36c8-8e52-51d674659bd7">
 	>
 
@@ -170,7 +170,7 @@ definition
 					DV_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0033] occurrences matches {0..1} matches {    -- Klarer du å ligge flatt på ryggen?
+			ELEMENT[at0033] occurrences matches {0..1} matches {    -- Har du problemer med å ligge flatt på ryggen?
 				value matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {
@@ -360,7 +360,7 @@ ontology
 					description = <"">
 				>
 				["at0033"] = <
-					text = <"Klarer du å ligge flatt på ryggen?">
+					text = <"Har du problemer med å ligge flatt på ryggen?">
 					description = <"">
 				>
 				["at0034"] = <
