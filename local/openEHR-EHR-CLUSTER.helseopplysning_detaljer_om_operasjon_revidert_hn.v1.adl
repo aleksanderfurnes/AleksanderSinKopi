@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"15964e929ba5c77031e99bddaf15bd4a">
+		["MD5-CAM-1.0.1"] = <"e8affd06148bfdc63ec2bb4fdff6e909">
 		["build_uid"] = <"f7e4871e-fab2-36c8-8e52-51d674659bd7">
 	>
 
@@ -126,7 +126,7 @@ definition
 							[local::
 							at0022,    -- Ja
 							at0023,    -- Nei
-							at0024]    -- Vet ikke
+							at0024]    -- Usikker
 						}
 					}
 				}
@@ -143,7 +143,7 @@ definition
 							[local::
 							at0027,    -- Ja
 							at0028,    -- Nei
-							at0029]    -- Vet ikke
+							at0029]    -- Usikker
 						}
 					}
 				}
@@ -160,7 +160,7 @@ definition
 							[local::
 							at0051,    -- Ja
 							at0052,    -- Nei
-							at0053]    -- Vet ikke
+							at0053]    -- Usikker
 						}
 					}
 				}
@@ -177,7 +177,7 @@ definition
 							[local::
 							at0034,    -- Ja
 							at0035,    -- Nei
-							at0036]    -- Vet ikke
+							at0036]    -- Usikker
 						}
 					}
 				}
@@ -210,7 +210,7 @@ definition
 							[local::
 							at0043,    -- Ja
 							at0044,    -- Nei
-							at0045]    -- Vet ikke
+							at0045]    -- Usikker
 						}
 					}
 				}
@@ -324,7 +324,7 @@ ontology
 					description = <"">
 				>
 				["at0024"] = <
-					text = <"Vet ikke">
+					text = <"Usikker">
 					description = <"">
 				>
 				["at0025"] = <
@@ -344,7 +344,7 @@ ontology
 					description = <"">
 				>
 				["at0029"] = <
-					text = <"Vet ikke">
+					text = <"Usikker">
 					description = <"">
 				>
 				["at0030"] = <
@@ -372,7 +372,7 @@ ontology
 					description = <"">
 				>
 				["at0036"] = <
-					text = <"Vet ikke">
+					text = <"Usikker">
 					description = <"">
 				>
 				["at0037"] = <
@@ -408,7 +408,7 @@ ontology
 					description = <"">
 				>
 				["at0045"] = <
-					text = <"Vet ikke">
+					text = <"Usikker">
 					description = <"">
 				>
 				["at0046"] = <
@@ -440,7 +440,7 @@ ontology
 					description = <"">
 				>
 				["at0053"] = <
-					text = <"Vet ikke">
+					text = <"Usikker">
 					description = <"">
 				>
 				["at0054"] = <
