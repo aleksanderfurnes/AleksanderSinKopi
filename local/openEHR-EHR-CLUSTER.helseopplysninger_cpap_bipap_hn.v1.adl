@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"cde1fc1960bb05874162788f0c13c81c">
+		["MD5-CAM-1.0.1"] = <"fe4971080c39322f1ae00e366c556963">
 		["build_uid"] = <"788cc613-d795-3542-9855-a1c4d68f66ec">
 	>
 
@@ -54,7 +54,7 @@ ontology
 				>
 				["at0001"] = <
 					text = <"Bruker du CPAP- eller BiPAP-maskin?">
-					description = <"">
+					description = <"Hvis du skal opereres må du ta med maskinen til sykehuset.">
 				>
 				["at0002"] = <
 					text = <"Ja">
