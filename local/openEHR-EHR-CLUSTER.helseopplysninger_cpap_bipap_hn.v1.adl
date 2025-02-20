@@ -1,0 +1,69 @@
+archetype (adl_version=1.4; uid=b470f703-7ec0-4258-b760-b4078c670393)
+	openEHR-EHR-CLUSTER.helseopplysninger_cpap_bipap_hn.v1
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::nb]>
+
+description
+	original_author = <
+		["date"] = <"2025-02-20">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"cde1fc1960bb05874162788f0c13c81c">
+		["build_uid"] = <"788cc613-d795-3542-9855-a1c4d68f66ec">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- helseopplysninger_cpap_bipap_hn
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Bruker du CPAP- eller BiPAP-maskin?
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0002,    -- Ja
+							at0003]    -- Nei
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["nb"] = <
+			items = <
+				["at0000"] = <
+					text = <"helseopplysninger_cpap_bipap_hn">
+					description = <"helseopplysninger_cpap_bipap_hn">
+				>
+				["at0001"] = <
+					text = <"Bruker du CPAP- eller BiPAP-maskin?">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"Ja">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Nei">
+					description = <"">
+				>
+			>
+		>
+	>
