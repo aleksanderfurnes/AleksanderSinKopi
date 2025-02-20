@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "MD5-CAM-1.0.1" : "c953689f4400c81fee7a78a541603394",
+      "MD5-CAM-1.0.1" : "1b589b1144cf6c79e2d50dfe2d003c4a",
       "PARENT:MD5-CAM-1.0.1" : "BBA2C8A4A40921B9CD67FB733F13FBBF",
-      "sem_ver" : "46.0.0",
+      "sem_ver" : "47.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -12611,6 +12611,13 @@
                             } ]
                           } ],
                           "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0025.2",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
                         } ]
                       } ],
                       "attributeTuples" : [ ]
@@ -12815,7 +12822,7 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0025.1",
             "text" : "Beskrivelse:",
-            "description" : "Ytterligere fritekst om det spesifikke prosedyrespørsmålet som ikke er omfattet av andre felt."
+            "description" : "Hvilken type operasjon, årstall og eventuelle andre kommentarer."
           },
           "ac0.4" : {
             "@type" : "ARCHETYPE_TERM",
