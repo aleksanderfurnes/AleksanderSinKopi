@@ -23,30 +23,13 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"d5342b68766e19c8ea2945eb82a5b9b8">
+		["MD5-CAM-1.0.1"] = <"983d96388dc4ad520f4b8bd708f64a88">
 		["build_uid"] = <"f7e4871e-fab2-36c8-8e52-51d674659bd7">
 	>
 
 definition
 	CLUSTER[at0000] matches {    -- helseopplysning_detaljer_om_operasjon_revidert_hn
 		items cardinality matches {1..*; unordered} matches {
-			ELEMENT[at0047] occurrences matches {0..1} matches {    -- Fikk du problemer (komplikasjoner) etter operasjonen?
-				value matches {
-					DV_CODED_TEXT matches {
-						defining_code matches {
-							[local::
-							at0048,    -- Ja
-							at0049,    -- Nei
-							at0050]    -- Usikker
-						}
-					}
-				}
-			}
-			ELEMENT[at0054] occurrences matches {0..1} matches {    -- Beskrivelse:
-				value matches {
-					DV_TEXT matches {*}
-				}
-			}
 			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Har du tidligere hatt narkose, spinal- eller epidural (ryggbedøvelse)?
 				value matches {
 					DV_CODED_TEXT matches {
@@ -415,22 +398,6 @@ ontology
 					text = <"Beskrivelse:">
 					description = <"">
 				>
-				["at0047"] = <
-					text = <"Fikk du problemer (komplikasjoner) etter operasjonen?">
-					description = <"">
-				>
-				["at0048"] = <
-					text = <"Ja">
-					description = <"">
-				>
-				["at0049"] = <
-					text = <"Nei">
-					description = <"">
-				>
-				["at0050"] = <
-					text = <"Usikker">
-					description = <"">
-				>
 				["at0051"] = <
 					text = <"Ja">
 					description = <"">
@@ -441,10 +408,6 @@ ontology
 				>
 				["at0053"] = <
 					text = <"Usikker">
-					description = <"">
-				>
-				["at0054"] = <
-					text = <"Beskrivelse:">
 					description = <"">
 				>
 			>
