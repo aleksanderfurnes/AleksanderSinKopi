@@ -28,7 +28,7 @@ Det kunne vært benyttet kartleggingsarketyper, men vurderingen er at det bare v
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"9b39d7077c420250e914b2e157d54a27">
+		["MD5-CAM-1.0.1"] = <"55324e2f5954316a8158e50306b397e7">
 		["build_uid"] = <"d0a4f823-cf96-3c22-a04c-bcd073856a16">
 	>
 
@@ -37,9 +37,16 @@ definition
 		data matches {
 			ITEM_TREE[at0001] matches {    -- Item tree
 				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0157] occurrences matches {0..1} matches {    -- Spørsmål skrives her
+					ELEMENT[at0158] occurrences matches {0..1} matches {    -- Spørsmål skrives her
 						value matches {
-							DV_BOOLEAN matches {*}
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0159,    -- Ja
+									at0160,    -- Nei
+									at0161]    -- Usikker
+								}
+							}
 						}
 					}
 				}
@@ -66,8 +73,20 @@ ontology
 					text = <"Item tree">
 					description = <"@ internal @">
 				>
-				["at0157"] = <
+				["at0158"] = <
 					text = <"Spørsmål skrives her">
+					description = <"">
+				>
+				["at0159"] = <
+					text = <"Ja">
+					description = <"">
+				>
+				["at0160"] = <
+					text = <"Nei">
+					description = <"">
+				>
+				["at0161"] = <
+					text = <"Usikker">
 					description = <"">
 				>
 			>
