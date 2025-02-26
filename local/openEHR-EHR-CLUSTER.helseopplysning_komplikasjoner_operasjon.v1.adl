@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"93a8000e35e0062535cb4cbc17a4bb87">
+		["MD5-CAM-1.0.1"] = <"732108d712dc332702428e4bea439481">
 		["build_uid"] = <"54d335b9-845a-310e-b67c-9513e922c21e">
 	>
 
@@ -40,6 +40,11 @@ definition
 							at0004]    -- Usikker
 						}
 					}
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..1} matches {    -- Beskrivelse:
+				value matches {
+					DV_TEXT matches {*}
 				}
 			}
 		}
@@ -67,6 +72,10 @@ ontology
 				>
 				["at0004"] = <
 					text = <"Usikker">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Beskrivelse:">
 					description = <"">
 				>
 			>
