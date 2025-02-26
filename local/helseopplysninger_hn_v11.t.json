@@ -22,7 +22,7 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "MD5-CAM-1.0.1" : "1b589b1144cf6c79e2d50dfe2d003c4a",
+      "MD5-CAM-1.0.1" : "b3d444add0bcf88fb9f800ae033be6fe",
       "PARENT:MD5-CAM-1.0.1" : "BBA2C8A4A40921B9CD67FB733F13FBBF",
       "sem_ver" : "47.0.0",
       "build_uid" : ""
@@ -15136,7 +15136,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "e8affd06148bfdc63ec2bb4fdff6e909"
+        "PARENT:MD5-CAM-1.0.1" : "d5342b68766e19c8ea2945eb82a5b9b8"
       },
       "details" : {
         "nb" : {
@@ -15203,12 +15203,6 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "nb" : {
-          "at0038" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0038",
-            "text" : "Har du løse tenner, tannprotese eller piercing i munnen?",
-            "description" : "Dette inkluderer bro, stift og implantater. Gjelder ikke fyllinger i egne tenner."
-          },
           "at0038.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0038.1",
@@ -15259,7 +15253,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "fe4971080c39322f1ae00e366c556963"
       },
-      "details" : { }
+      "details" : {
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.helseopplysninger_cpap_bipap_hn.v1",
     "differential" : true,
@@ -15278,14 +15285,7 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "nb" : {
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Bruker du CPAP- eller BiPAP-maskin?",
-            "description" : ""
-          }
-        }
+        "nb" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
