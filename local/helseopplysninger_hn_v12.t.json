@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "MD5-CAM-1.0.1" : "54087068adbb2d379fe77acda699ad54",
+      "MD5-CAM-1.0.1" : "a2cd23c46f7f846159d915d57c5daef9",
       "PARENT:MD5-CAM-1.0.1" : "BBA2C8A4A40921B9CD67FB733F13FBBF",
-      "sem_ver" : "48.0.0",
+      "sem_ver" : "49.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -12442,15 +12442,6 @@
                           "nodeId" : "at0025.2",
                           "attributes" : [ ],
                           "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_ARCHETYPE_ROOT",
-                          "rmTypeName" : "CLUSTER",
-                          "occurrences" : "0..1",
-                          "nodeId" : "at0036.2",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ],
-                          "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-helseopplysning_komplikasjoner_operasjon-002.v1",
-                          "referenceType" : "archetypeOverlay"
                         } ]
                       } ],
                       "attributeTuples" : [ ]
@@ -12546,15 +12537,6 @@
                           "nodeId" : "at0025.1",
                           "attributes" : [ ],
                           "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_ARCHETYPE_ROOT",
-                          "rmTypeName" : "CLUSTER",
-                          "occurrences" : "0..1",
-                          "nodeId" : "at0036.1",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ],
-                          "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-helseopplysning_komplikasjoner_operasjon-001.v1",
-                          "referenceType" : "archetypeOverlay"
                         } ]
                       } ],
                       "attributeTuples" : [ ]
@@ -12562,10 +12544,10 @@
                       "@type" : "C_ARCHETYPE_ROOT",
                       "rmTypeName" : "CLUSTER",
                       "occurrences" : "0..1",
-                      "nodeId" : "at0040.1",
+                      "nodeId" : "at0040.2",
                       "attributes" : [ ],
                       "attributeTuples" : [ ],
-                      "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-helseopplysning_detaljer_om_operasjon_hn-001.v1",
+                      "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-helseopplysning_detaljer_om_operasjon_revidert_hn-001.v1",
                       "referenceType" : "archetypeOverlay"
                     } ]
                   } ],
@@ -15269,7 +15251,7 @@
     "translations" : [ ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "b7ea61f4-b3d6-4be9-9748-ed5a48bc5cd5",
+    "uid" : "22b919e0-542f-4ae0-b1fb-d1c6ee033bf5",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
       "originalAuthor" : { },
@@ -15278,15 +15260,15 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "fd9c78bed60249b86a7ca4ea8ce1c516"
+        "PARENT:MD5-CAM-1.0.1" : "983d96388dc4ad520f4b8bd708f64a88"
       },
       "details" : { }
     },
-    "parentArchetypeId" : "openEHR-EHR-CLUSTER.helseopplysning_detaljer_om_operasjon_hn.v1",
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.helseopplysning_detaljer_om_operasjon_revidert_hn.v1",
     "differential" : true,
     "archetypeId" : {
       "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-helseopplysning_detaljer_om_operasjon_hn-001.v1"
+      "value" : "openEHR-EHR-CLUSTER.ovl-helseopplysning_detaljer_om_operasjon_revidert_hn-001.v1"
     },
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
@@ -15299,7 +15281,38 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "nb" : { }
+        "nb" : {
+          "at0047" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0047",
+            "text" : "Fikk du problemer (komplikasjoner) etter operasjonen?",
+            "description" : ""
+          },
+          "at0048" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0048",
+            "text" : "Ja",
+            "description" : ""
+          },
+          "at0049" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0049",
+            "text" : "Nei",
+            "description" : ""
+          },
+          "at0050" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0050",
+            "text" : "Usikker",
+            "description" : ""
+          },
+          "at0054" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0054",
+            "text" : "Beskrivelse:",
+            "description" : ""
+          }
+        }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -15307,108 +15320,6 @@
     },
     "adlVersion" : "1.4",
     "buildUid" : "f7e4871e-fab2-36c8-8e52-51d674659bd7",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "nb"
-    },
-    "translations" : [ ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "d69ea0a2-6b6f-448b-adbf-00037b40b617",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "732108d712dc332702428e4bea439481"
-      },
-      "details" : { }
-    },
-    "parentArchetypeId" : "openEHR-EHR-CLUSTER.helseopplysning_komplikasjoner_operasjon.v1",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-helseopplysning_komplikasjoner_operasjon-001.v1"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "CLUSTER",
-      "nodeId" : "at0000.1",
-      "attributes" : [ ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "nb" : { }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "54d335b9-845a-310e-b67c-9513e922c21e",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "nb"
-    },
-    "translations" : [ ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "a07c4138-7bfc-477e-a0cd-84f6ffd3f1af",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "732108d712dc332702428e4bea439481"
-      },
-      "details" : { }
-    },
-    "parentArchetypeId" : "openEHR-EHR-CLUSTER.helseopplysning_komplikasjoner_operasjon.v1",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-helseopplysning_komplikasjoner_operasjon-002.v1"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "CLUSTER",
-      "nodeId" : "at0000.1",
-      "attributes" : [ ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "nb" : { }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "54d335b9-845a-310e-b67c-9513e922c21e",
     "rmName" : "openehr",
     "rmRelease" : "1.1.0",
     "generated" : true,
