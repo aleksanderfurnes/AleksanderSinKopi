@@ -1,0 +1,74 @@
+archetype (adl_version=1.4; uid=ba6fa2cf-717f-45f3-875e-9f59386a684c)
+	openEHR-EHR-CLUSTER.helseopplysning_komplikasjoner_operasjon.v1
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::nb]>
+
+description
+	original_author = <
+		["date"] = <"2025-02-26">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"93a8000e35e0062535cb4cbc17a4bb87">
+		["build_uid"] = <"54d335b9-845a-310e-b67c-9513e922c21e">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- helseopplysning_komplikasjoner_operasjon
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Fikk du problemer (komplikasjoner) etter operasjonen?
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0002,    -- Ja
+							at0003,    -- Nei
+							at0004]    -- Usikker
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["nb"] = <
+			items = <
+				["at0000"] = <
+					text = <"helseopplysning_komplikasjoner_operasjon">
+					description = <"helseopplysning_komplikasjoner_operasjon">
+				>
+				["at0001"] = <
+					text = <"Fikk du problemer (komplikasjoner) etter operasjonen?">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"Ja">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Nei">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Usikker">
+					description = <"">
+				>
+			>
+		>
+	>
