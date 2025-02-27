@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "MD5-CAM-1.0.1" : "5785f1345deade9d34f34f47be75b86d",
+      "MD5-CAM-1.0.1" : "428bb39215a096a1ac9931ab2ff80db8",
       "PARENT:MD5-CAM-1.0.1" : "BBA2C8A4A40921B9CD67FB733F13FBBF",
-      "sem_ver" : "52.0.0",
+      "sem_ver" : "53.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -14941,6 +14941,16 @@
                 "rmAttributeName" : "value",
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_BOOLEAN",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "DV_CODED_TEXT",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
@@ -14952,7 +14962,7 @@
                       "terminologyId" : {
                         "value" : "local"
                       },
-                      "constraint" : [ "ac0.2" ],
+                      "constraint" : [ "ac0.3" ],
                       "selectedTerminologies" : [ ]
                     } ]
                   } ],
@@ -14978,10 +14988,10 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "en" : {
-          "ac0.2" : {
+          "ac0.3" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.2",
+            "code" : "ac0.3",
             "description" : ""
           }
         },
@@ -14993,17 +15003,17 @@
             "description" : "Om individet trenger tolk.",
             "comment" : "For eksempel kan et engelsktalende individ i Quebec trenge tolk dersom administrasjonsspråket er fransk, og dermed konsultasjonen gjennomføres på fransk, men ikke dersom administrasjonsspråket er engelsk."
           },
-          "ac0.2" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.2",
-            "description" : ""
-          },
           "at0004.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0004.1",
             "text" : "Hvilket språk?",
             "description" : "Ytterligere fritekstbeskrivelse om administrasjonsspråket som ikke er registrert i andre felt."
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
           }
         }
       },
@@ -15018,6 +15028,11 @@
         "ac0.2" : {
           "@type" : "VALUE_SET",
           "id" : "ac0.2",
+          "members" : [ "at0005", "at0006" ]
+        },
+        "ac0.3" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.3",
           "members" : [ "at0005", "at0006" ]
         }
       }
