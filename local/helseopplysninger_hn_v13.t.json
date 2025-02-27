@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "MD5-CAM-1.0.1" : "428bb39215a096a1ac9931ab2ff80db8",
+      "MD5-CAM-1.0.1" : "ca40e5a4dad312c9202a4c088fb0295e",
       "PARENT:MD5-CAM-1.0.1" : "BBA2C8A4A40921B9CD67FB733F13FBBF",
-      "sem_ver" : "53.0.0",
+      "sem_ver" : "54.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -14944,29 +14944,6 @@
                   "rmTypeName" : "DV_BOOLEAN",
                   "attributes" : [ ],
                   "attributeTuples" : [ ]
-                }, {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_TEXT",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                }, {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_CODED_TEXT",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "defining_code",
-                    "children" : [ {
-                      "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "TERMINOLOGY_CODE",
-                      "occurrences" : "1..1",
-                      "terminologyId" : {
-                        "value" : "local"
-                      },
-                      "constraint" : [ "ac0.3" ],
-                      "selectedTerminologies" : [ ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
                 } ]
               } ],
               "attributeTuples" : [ ]
@@ -14987,14 +14964,7 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "en" : {
-          "ac0.3" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.3",
-            "description" : ""
-          }
-        },
+        "en" : { },
         "nb" : {
           "at0003.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -15008,12 +14978,6 @@
             "code" : "at0004.1",
             "text" : "Hvilket språk?",
             "description" : "Ytterligere fritekstbeskrivelse om administrasjonsspråket som ikke er registrert i andre felt."
-          },
-          "ac0.3" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.3",
-            "description" : ""
           }
         }
       },
