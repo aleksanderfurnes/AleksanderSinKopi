@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "MD5-CAM-1.0.1" : "ca40e5a4dad312c9202a4c088fb0295e",
+      "MD5-CAM-1.0.1" : "ab63a8f422febc502b5b22cee2ff7753",
       "PARENT:MD5-CAM-1.0.1" : "BBA2C8A4A40921B9CD67FB733F13FBBF",
-      "sem_ver" : "54.0.0",
+      "sem_ver" : "55.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -14941,8 +14941,21 @@
                 "rmAttributeName" : "value",
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_BOOLEAN",
-                  "attributes" : [ ],
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "1..1",
+                      "terminologyId" : {
+                        "value" : "local"
+                      },
+                      "constraint" : [ "ac0.14" ],
+                      "selectedTerminologies" : [ ]
+                    } ]
+                  } ],
                   "attributeTuples" : [ ]
                 } ]
               } ],
@@ -14964,8 +14977,21 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "en" : { },
+        "en" : {
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.14",
+            "description" : ""
+          }
+        },
         "nb" : {
+          "at0004.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004.1",
+            "text" : "Hvilket språk?",
+            "description" : "Ytterligere fritekstbeskrivelse om administrasjonsspråket som ikke er registrert i andre felt."
+          },
           "at0003.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0003.1",
@@ -14973,11 +14999,11 @@
             "description" : "Om individet trenger tolk.",
             "comment" : "For eksempel kan et engelsktalende individ i Quebec trenge tolk dersom administrasjonsspråket er fransk, og dermed konsultasjonen gjennomføres på fransk, men ikke dersom administrasjonsspråket er engelsk."
           },
-          "at0004.1" : {
+          "ac0.14" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004.1",
-            "text" : "Hvilket språk?",
-            "description" : "Ytterligere fritekstbeskrivelse om administrasjonsspråket som ikke er registrert i andre felt."
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.14",
+            "description" : ""
           }
         }
       },
@@ -14997,6 +15023,56 @@
         "ac0.3" : {
           "@type" : "VALUE_SET",
           "id" : "ac0.3",
+          "members" : [ "at0005", "at0006" ]
+        },
+        "ac0.4" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.4",
+          "members" : [ "at0005", "at0006" ]
+        },
+        "ac0.5" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.5",
+          "members" : [ "at0005", "at0006" ]
+        },
+        "ac0.6" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.6",
+          "members" : [ "at0005", "at0006" ]
+        },
+        "ac0.8" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.8",
+          "members" : [ "at0005", "at0006" ]
+        },
+        "ac0.9" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.9",
+          "members" : [ ]
+        },
+        "ac0.10" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.10",
+          "members" : [ ]
+        },
+        "ac0.11" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.11",
+          "members" : [ "ac0.7" ]
+        },
+        "ac0.12" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.12",
+          "members" : [ "ac0.7" ]
+        },
+        "ac0.13" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.13",
+          "members" : [ "at0005", "at0006" ]
+        },
+        "ac0.14" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.14",
           "members" : [ "at0005", "at0006" ]
         }
       }
