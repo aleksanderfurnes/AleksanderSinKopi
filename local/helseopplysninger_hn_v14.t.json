@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "MD5-CAM-1.0.1" : "dd70a889a5885c37db849adecffeca1a",
+      "MD5-CAM-1.0.1" : "6dea3e7cd75b36fa418474b804be1a61",
       "PARENT:MD5-CAM-1.0.1" : "BBA2C8A4A40921B9CD67FB733F13FBBF",
-      "sem_ver" : "58.0.0",
+      "sem_ver" : "59.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -14859,24 +14859,15 @@
                             "rmAttributeName" : "defining_code",
                             "children" : [ {
                               "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "CODE_PHRASE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
                               "occurrences" : "1..1",
                               "terminologyId" : {
                                 "value" : "local"
                               },
-                              "constraint" : [ "at0044", "at0045", "at0046", "at0047" ]
+                              "constraint" : [ "ac0.2" ],
+                              "selectedTerminologies" : [ ]
                             } ]
                           } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_TEXT",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_BOOLEAN",
-                          "attributes" : [ ],
                           "attributeTuples" : [ ]
                         } ]
                       } ],
@@ -14926,7 +14917,14 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "en" : { },
+        "en" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
+        },
         "nb" : {
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -14954,12 +14952,29 @@
             "code" : "at0025.1",
             "text" : "Beskriv hvordan du reagerer:",
             "description" : "Ytterligere fritekst om det spesifikke overfølsomhetsreaksjonsspørsmålet som ikke er omfattet av andre felt."
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
           }
         }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
-      "valueSets" : { }
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0044", "at0045", "at0046", "at0047" ]
+        },
+        "ac0.2" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.2",
+          "members" : [ "at0044", "at0045", "at0046", "at0047" ]
+        }
+      }
     },
     "adlVersion" : "1.4",
     "buildUid" : "d70a609a-80f6-4dde-b4fc-fd01060c1f78",
