@@ -28,7 +28,7 @@ Det kunne vært benyttet kartleggingsarketyper, men vurderingen er at det bare v
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"f92a0ee53ab815d44c48eb8f59a3c375">
+		["MD5-CAM-1.0.1"] = <"e0428e3c8ef5b83cec7ad8eda1fd146f">
 		["build_uid"] = <"d0a4f823-cf96-3c22-a04c-bcd073856a16">
 	>
 
@@ -39,29 +39,18 @@ definition
 				items cardinality matches {0..*; unordered} matches {
 					CLUSTER[at0012] occurrences matches {0..1} matches {    -- Reise utenfor Norden
 						items cardinality matches {1..*; unordered} matches {
-							ELEMENT[at0014] occurrences matches {0..1} matches {    -- Vært innlagt i helseinstitusjon?
+							ELEMENT[at0027] occurrences matches {0..1} matches {    -- Har du i løpet av de siste 12 måneder vært i et land utenfor Norden, hvor du har:
 								value matches {
-									DV_BOOLEAN matches {*}
-								}
-							}
-							ELEMENT[at0019] occurrences matches {0..1} matches {    -- Fått omfattende undersøkelse eller behandling i en helsetjeneste eller hos tannlege?
-								value matches {
-									DV_BOOLEAN matches {*}
-								}
-							}
-							ELEMENT[at0020] occurrences matches {0..1} matches {    -- Arbeidet som helsearbeider?
-								value matches {
-									DV_BOOLEAN matches {*}
-								}
-							}
-							ELEMENT[at0021] occurrences matches {0..1} matches {    -- Oppholdt deg i barnehjem eller flyktningleir?
-								value matches {
-									DV_BOOLEAN matches {*}
-								}
-							}
-							ELEMENT[at0022] occurrences matches {0..1} matches {    -- Nei, ingen av valgene over gjelder meg
-								value matches {
-									DV_BOOLEAN matches {*}
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0028,    -- Vært innlagt i helseinstitusjon?
+											at0029,    -- Fått omfattende undersøkelse eller behandling i en helsetjeneste eller hos tannlege?
+											at0030,    -- Arbeidet som helsearbeider?
+											at0031,    -- Oppholdt deg i barnehjem eller flyktningsleir?
+											at0032]    -- Nei, ingen av valgene over gjelder meg.
+										}
+									}
 								}
 							}
 							ELEMENT[at0023] occurrences matches {0..1} matches {    -- Har du etter hjemkomst tatt en MRSA-prøve?
@@ -106,26 +95,6 @@ ontology
 					text = <"Item tree">
 					description = <"@ internal @">
 				>
-				["at0014"] = <
-					text = <"Vært innlagt i helseinstitusjon?">
-					description = <"">
-				>
-				["at0019"] = <
-					text = <"Fått omfattende undersøkelse eller behandling i en helsetjeneste eller hos tannlege?">
-					description = <"">
-				>
-				["at0020"] = <
-					text = <"Arbeidet som helsearbeider?">
-					description = <"">
-				>
-				["at0021"] = <
-					text = <"Oppholdt deg i barnehjem eller flyktningleir?">
-					description = <"">
-				>
-				["at0022"] = <
-					text = <"Nei, ingen av valgene over gjelder meg">
-					description = <"">
-				>
 				["at0023"] = <
 					text = <"Har du etter hjemkomst tatt en MRSA-prøve?">
 					description = <"">
@@ -140,6 +109,30 @@ ontology
 				>
 				["at0026"] = <
 					text = <"Nei jeg har ikke tatt MRSA-prøve">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Har du i løpet av de siste 12 måneder vært i et land utenfor Norden, hvor du har:">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Vært innlagt i helseinstitusjon?">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Fått omfattende undersøkelse eller behandling i en helsetjeneste eller hos tannlege?">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Arbeidet som helsearbeider?">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Oppholdt deg i barnehjem eller flyktningsleir?">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Nei, ingen av valgene over gjelder meg.">
 					description = <"">
 				>
 			>
