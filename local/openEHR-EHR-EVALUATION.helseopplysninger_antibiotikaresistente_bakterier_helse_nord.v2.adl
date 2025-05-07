@@ -28,12 +28,12 @@ Det kunne vært benyttet kartleggingsarketyper, men vurderingen er at det bare v
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"ce9c08af1a846c529e8df8843db3b1a2">
+		["MD5-CAM-1.0.1"] = <"d0cc42ed24a421335eb11090445ec680">
 		["build_uid"] = <"d0a4f823-cf96-3c22-a04c-bcd073856a16">
 	>
 
 definition
-	EVALUATION[at0000] matches {    -- helseopplysninger_antibiotikaresistente_bakterier_helse_nord
+	EVALUATION[at0000] matches {    -- Helseopplysninger antibiotikaresistente bakterier HN
 		data matches {
 			ITEM_TREE[at0001] matches {    -- Item tree
 				items cardinality matches {0..*; unordered} matches {
@@ -80,7 +80,7 @@ ontology
 		["nb"] = <
 			items = <
 				["at0000"] = <
-					text = <"helseopplysninger_antibiotikaresistente_bakterier_helse_nord">
+					text = <"Helseopplysninger antibiotikaresistente bakterier HN">
 					description = <"Helseopplysninger slik det er definert for Helse Nord">
 				>
 				["at0001"] = <
