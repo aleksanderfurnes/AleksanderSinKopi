@@ -23,36 +23,25 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"21ed3d424cb9e42eeaa7f5aa40fca0c0">
+		["MD5-CAM-1.0.1"] = <"eb50b27c32194739b682169963739632">
 		["build_uid"] = <"23513691-aa9e-33e5-8926-b51d6612869b">
 	>
 
 definition
 	CLUSTER[at0000] matches {    -- helseopplysninger_antibiotikaresistente_bakterier_hn
 		items cardinality matches {1..*; unordered} matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Vært innlagt i helseinstitusjon?
+			ELEMENT[at0010] occurrences matches {0..1} matches {    -- Har du i løpet av de siste 12 måneder vært i et land utenfor Norden, hvor du har:
 				value matches {
-					DV_BOOLEAN matches {*}
-				}
-			}
-			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Fått omfattende undersøkelse eller behandling i en helsetjeneste eller hos tannlege?
-				value matches {
-					DV_BOOLEAN matches {*}
-				}
-			}
-			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Arbeidet som helsearbeider?
-				value matches {
-					DV_BOOLEAN matches {*}
-				}
-			}
-			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Oppholdt deg i barnehjem eller flyktningleir?
-				value matches {
-					DV_BOOLEAN matches {*}
-				}
-			}
-			ELEMENT[at0005] occurrences matches {0..1} matches {    -- Nei, ingen av valgene over gjelder meg
-				value matches {
-					DV_BOOLEAN matches {*}
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0011,    -- Vært innlagt i helseinstitusjon?
+							at0012,    -- Fått omfattende undersøkelse eller behandling i en helsetjeneste eller hos tannlege?
+							at0013,    -- Arbeidet som helsearbeider?
+							at0014,    -- Oppholdt deg i barnehjem eller flyktningleir?
+							at0015]    -- Nei, ingen av valgene over gjelder meg
+						}
+					}
 				}
 			}
 			ELEMENT[at0006] occurrences matches {0..1} matches {    -- Har du etter hjemkomst tatt en MRSA-prøve?
@@ -78,26 +67,6 @@ ontology
 					text = <"helseopplysninger_antibiotikaresistente_bakterier_hn">
 					description = <"helseopplysninger_antibiotikaresistente_bakterier_helse_nord">
 				>
-				["at0001"] = <
-					text = <"Vært innlagt i helseinstitusjon?">
-					description = <"">
-				>
-				["at0002"] = <
-					text = <"Fått omfattende undersøkelse eller behandling i en helsetjeneste eller hos tannlege?">
-					description = <"">
-				>
-				["at0003"] = <
-					text = <"Arbeidet som helsearbeider?">
-					description = <"">
-				>
-				["at0004"] = <
-					text = <"Oppholdt deg i barnehjem eller flyktningleir?">
-					description = <"">
-				>
-				["at0005"] = <
-					text = <"Nei, ingen av valgene over gjelder meg">
-					description = <"">
-				>
 				["at0006"] = <
 					text = <"Har du etter hjemkomst tatt en MRSA-prøve?">
 					description = <"">
@@ -112,6 +81,30 @@ ontology
 				>
 				["at0009"] = <
 					text = <"Nei jeg har ikke tatt MRSA-prøve">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Har du i løpet av de siste 12 måneder vært i et land utenfor Norden, hvor du har:">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Vært innlagt i helseinstitusjon?">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Fått omfattende undersøkelse eller behandling i en helsetjeneste eller hos tannlege?">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Arbeidet som helsearbeider?">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Oppholdt deg i barnehjem eller flyktningleir?">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Nei, ingen av valgene over gjelder meg">
 					description = <"">
 				>
 			>
