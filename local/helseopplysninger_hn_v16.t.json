@@ -22,7 +22,7 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "MD5-CAM-1.0.1" : "9a76dd936601ff194042d41c2a11e705",
+      "MD5-CAM-1.0.1" : "b186e7e91578be317dc1d6ce47e7825b",
       "PARENT:MD5-CAM-1.0.1" : "BBA2C8A4A40921B9CD67FB733F13FBBF",
       "sem_ver" : "65.0.0",
       "build_uid" : ""
@@ -15192,9 +15192,22 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "eb50b27c32194739b682169963739632"
+        "PARENT:MD5-CAM-1.0.1" : "dc58f9a4f1427ab3e9c7075fbd1e2f6e"
       },
-      "details" : { }
+      "details" : {
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.helseopplysninger_antibiotikaresistente_bakterier_hn.v1",
     "differential" : true,
