@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"02d7ea43a79e16c7c25ef08aab5a14a1">
+		["MD5-CAM-1.0.1"] = <"3d3dfc9fdc33b7953771a424366c66e8">
 		["build_uid"] = <"e5f3a40c-2ee1-3c51-a4b7-8c4315370861">
 	>
 
@@ -146,7 +146,13 @@ definition
 						items cardinality matches {1..*; unordered} matches {
 							ELEMENT[at0053] occurrences matches {0..1} matches {    -- Overspørsmål som er obligatorisk
 								value matches {
-									DV_CODED_TEXT matches {*}
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0056,    -- Vis underspørsmål
+											at0057]    -- Ikke vis underspørsmål
+										}
+									}
 								}
 							}
 							ELEMENT[at0054] occurrences matches {0..1} matches {    -- Underspørsmål som helst skal være obligatorisk når den vises
@@ -306,6 +312,14 @@ ontology
 				>
 				["at0054"] = <
 					text = <"Underspørsmål som helst skal være obligatorisk når den vises">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"Vis underspørsmål">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"Ikke vis underspørsmål">
 					description = <"">
 				>
 			>
