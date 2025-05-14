@@ -1,0 +1,218 @@
+archetype (adl_version=1.4; uid=4fcfdff4-975f-49f4-84e0-a9dbdf2da9e3)
+	openEHR-EHR-EVALUATION.testerarketype.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::nb]>
+
+description
+	original_author = <
+		["date"] = <"2025-05-14">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"96c2c75c47485bb8374c0f17e976a2b1">
+		["build_uid"] = <"e5f3a40c-2ee1-3c51-a4b7-8c4315370861">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- testerarketype
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Fritekst
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Kodet tekst
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0004,    -- Valg1
+									at0005,    -- Valg2
+									at0006,    -- Valg3
+									at0007,    -- Valg4
+									at0008]    -- Valg5
+								}
+							}
+						}
+					}
+					ELEMENT[at0009] occurrences matches {0..1} matches {    -- Kvantitet
+						value matches {
+							DV_QUANTITY matches {*}
+						}
+					}
+					ELEMENT[at0010] occurrences matches {0..1} matches {    -- Proporsjon
+						value matches {
+							DV_PROPORTION matches {*}
+						}
+					}
+					ELEMENT[at0011] occurrences matches {0..1} matches {    -- Heltall
+						value matches {
+							DV_COUNT matches {*}
+						}
+					}
+					ELEMENT[at0012] occurrences matches {0..1} matches {    -- DatoTid
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0013] occurrences matches {0..1} matches {    -- Tid
+						value matches {
+							DV_TIME matches {*}
+						}
+					}
+					ELEMENT[at0014] occurrences matches {0..1} matches {    -- Dato
+						value matches {
+							DV_DATE matches {*}
+						}
+					}
+					ELEMENT[at0015] occurrences matches {0..1} matches {    -- Ordinal
+						value matches {
+							1|[local::at0016],
+							2|[local::at0017],
+							3|[local::at0018],
+							4|[local::at0019]
+						}
+					}
+					ELEMENT[at0020] occurrences matches {0..1} matches {    -- Boolean1
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0021] occurrences matches {0..1} matches {    -- Boolean2
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0022] occurrences matches {0..1} matches {    -- Boolean3
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0023] occurrences matches {0..*} matches {    -- CLUSTER_SLOT
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["nb"] = <
+			items = <
+				["at0000"] = <
+					text = <"testerarketype">
+					description = <"testerarketype">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Fritekst">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Kodet tekst">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Valg1">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Valg2">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Valg3">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Valg4">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Valg5">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Kvantitet">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Proporsjon">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Heltall">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"DatoTid">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Tid">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Dato">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Ordinal">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Verdi1">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Verdi2">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Verdi3">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Verdi4">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Boolean1">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Boolean2">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Boolean3">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"CLUSTER_SLOT">
+					description = <"">
+				>
+			>
+		>
+	>
