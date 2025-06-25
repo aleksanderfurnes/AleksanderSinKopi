@@ -1,0 +1,56 @@
+archetype (adl_version=1.4; uid=13b60e27-48ae-448a-bd8b-6db6d9259601)
+	openEHR-EHR-COMPOSITION.care_entry_hn.v1
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::nb]>
+
+description
+	original_author = <
+		["date"] = <"2021-09-08">
+		["name"] = <"Bjørn Næss">
+		["organisation"] = <"DIPS AS">
+		["email"] = <"bna@dips.no">
+	>
+	lifecycle_state = <"0">
+	details = <
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+			purpose = <"Utviklet for å dekke behovet i Helse Nord med tanke på å lage nye kolonner i pasientliste ">
+			use = <"Benyttes for generelle registreringer til pasientliste. ">
+			misuse = <"Benyttes ikke for generelle kliniske kontakter. Benytt \"ENCOUNTER\"">
+		>
+	>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"51d07d28a0e3eb99440e5c01ab17bde4">
+		["build_uid"] = <"9319067f-6217-3486-aaa5-618389663bd8">
+	>
+
+definition
+	COMPOSITION[at0000] matches {    -- care_entry_hn
+		category matches {
+			DV_CODED_TEXT matches {
+				defining_code matches {
+					[openehr::433]
+				}
+			}
+		}
+		context matches {
+			EVENT_CONTEXT matches {*}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["nb"] = <
+			items = <
+				["at0000"] = <
+					text = <"care_entry_hn">
+					description = <"En generell struktur for å registrere ulike data som skal vises i pasientlister i DIPS Arena (primært).">
+					comment = <"Utviklet for å dekke behovet i Helse Nord med tanke på å lage nye kolonner i pasientliste ">
+				>
+			>
+		>
+	>
