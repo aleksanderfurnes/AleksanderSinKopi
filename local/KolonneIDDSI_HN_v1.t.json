@@ -19,7 +19,7 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "MD5-CAM-1.0.1" : "5fc76fa24f223c73fbc56a049ab3103e",
+      "MD5-CAM-1.0.1" : "0b5a873a2707c050d44df3eb01a1876e",
       "PARENT:MD5-CAM-1.0.1" : "51d07d28a0e3eb99440e5c01ab17bde4",
       "original_language" : "ISO_639-1::nb"
     },
@@ -102,7 +102,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "d1f01defd8729c9f574aa2b059b715e9"
       },
-      "details" : { }
+      "details" : {
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-ADMIN_ENTRY.kolonneiddsi.v1",
     "differential" : true,
@@ -137,13 +150,15 @@
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
                     "rmAttributeName" : "defining_code",
-                    "existence" : "0..1",
                     "children" : [ {
                       "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
                       "terminologyId" : {
                         "value" : "local_terms"
                       },
                       "constraint" : [ ],
+                      "selectedTerminologies" : [ "local_terms" ],
                       "includedExternalTerminologyCodes" : [ {
                         "terminologyId" : "local_terms",
                         "code" : "0",
@@ -176,6 +191,10 @@
                         "terminologyId" : "local_terms",
                         "code" : "7",
                         "value" : "Normal"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "8",
+                        "value" : "0 per os"
                       } ]
                     } ]
                   } ],
